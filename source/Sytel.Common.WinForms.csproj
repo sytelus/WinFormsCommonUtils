@@ -1,0 +1,121 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.40607</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C28979C-3687-4800-88A3-FBAD6C957DB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sytel_Common_WinForms</RootNamespace>
+    <AssemblyName>Sytel.Common.WinForms</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationPropertyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyAttributeInfo.cs" />
+    <Compile Include="AssemblyInfoViewerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="IContentEditor.cs" />
+    <Compile Include="MRUMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContentFormats.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="HierarchicalContentDocument.cs" />
+    <Compile Include="PasswordInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationPropertyEditor.resx">
+      <DependentUpon>ApplicationPropertyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppOptionsForm.resx">
+      <DependentUpon>AppOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssemblyInfoViewerUserControl.resx">
+      <DependentUpon>AssemblyInfoViewerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRUMenuItem.resx">
+      <DependentUpon>MRUMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordInputForm.resx">
+      <DependentUpon>PasswordInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextEditor.resx">
+      <DependentUpon>RichTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditableTreeViewControl.resx">
+      <DependentUpon>EditableTreeViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HierarchyEditor.resx">
+      <DependentUpon>HierarchyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorksheetEditor.resx">
+      <DependentUpon>WorksheetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyBag.cs" />
+    <Compile Include="RichTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditableTreeViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HierarchyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorksheetEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>
